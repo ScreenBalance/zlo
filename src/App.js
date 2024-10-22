@@ -6,13 +6,13 @@ import './App.css'; // Keep the default styles
 
 function App() {
   return (
-    <Router>
+    <Router basename="/zlo">  {/* Add the basename for your subdirectory */}
       <div className="App">
         <Routes>
           {/* Use Routes for routing between screens */}
           <Route
             path="/"
-            element={<A1Screen navigateToA2={() => window.location.replace('/a2')} />} // Use navigateToA2 to navigate to A2
+            element={<A1Screen navigateToA2={() => window.location.replace('/zlo/a2')} />} // Ensure the correct path for navigation
           />
           <Route
             path="/a2"
