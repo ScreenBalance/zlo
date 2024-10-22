@@ -33,7 +33,7 @@ const A2Screen = () => {
       <div
         style={{
           width: '100%',
-          height: '100px',
+          height: '8.06vh', // Header height as percentage of viewport height
           background: 'white',
           borderBottom: '1px solid #EDEDED', // Bottom border
           display: 'flex',
@@ -53,17 +53,20 @@ const A2Screen = () => {
             height: '15.84px',
             position: 'absolute',
             left: '22px',
-            top: '14px',
+            top: '50%', // Center vertically
+            transform: 'translateY(-50%)',
             cursor: 'pointer',
           }}
         />
 
-        {/* Placeholder for "zlo" logo */}
+        {/* "zlo" Text Logo */}
         <span
           style={{
-            fontSize: 'clamp(20px, 4vw, 28px)', // Dynamic sizing for responsiveness
-            fontFamily: 'Poppins',
+            fontSize: '15pt',
+            fontFamily: 'Poppins, sans-serif',
+            letterSpacing: '17%',
             color: '#E8E8E8',
+            textTransform: 'uppercase', // If you want uppercase "zlo"
           }}
         >
           zlo
@@ -76,9 +79,9 @@ const A2Screen = () => {
           display: 'grid',
           gridTemplateColumns: 'repeat(24, 1fr)', // 24 columns
           gridGap: '2px', // 2px gap between dots
-          width: '100%',
-          height: 'calc(100vh - 150px)', // Account for the header and footer space
-          padding: '0 20px',
+          width: '72.77%',
+          height: '71.54vh', // Grid height as percentage of viewport height
+          justifySelf: 'center',
           justifyContent: 'center',
           alignItems: 'center',
         }}
@@ -101,7 +104,7 @@ const A2Screen = () => {
         style={{
           textAlign: 'center',
           fontSize: 'clamp(18px, 5vw, 36px)', // Dynamic font size for responsiveness
-          fontFamily: 'Poppins',
+          fontFamily: 'Poppins, sans-serif',
           fontWeight: '300',
           color: 'rgba(0, 0, 0, 0.7)',
           paddingBottom: '10px',
@@ -117,7 +120,7 @@ const A2Screen = () => {
           bottom: '1%',
           fontSize: '10px',
           color: 'rgba(0, 0, 0, 0.29)',
-          fontFamily: 'inter',
+          fontFamily: 'inter, sans-serif',
           textAlign: 'center',
           width: '100%',
         }}
