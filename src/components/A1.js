@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import zelloLogo from '../assets/zello-logo.svg'; // Import your SVG file
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 
-const A1Screen = ({ navigateToA2 }) => {
+const A1Screen = () => {
   const [state, setState] = useState('state1'); // Starting with State 1 (initial state)
   const [showFullButton, setShowFullButton] = useState(false); // Controls full button visibility
+  const navigate = useNavigate(); // Initialize useNavigate to programmatically navigate
 
   useEffect(() => {
     let timeouts = [];
@@ -40,7 +42,7 @@ const A1Screen = ({ navigateToA2 }) => {
   // Handle button click
   const handleButtonClick = () => {
     if (state !== 'state1') {
-      navigateToA2(); // Navigate to the next page (A2)
+      navigate('/a2'); // Use useNavigate to go to A2 without reloading the page
     }
   };
 
@@ -157,8 +159,6 @@ const A1Screen = ({ navigateToA2 }) => {
           overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
-       
-
         /* WebKit Browsers (Chrome, Safari, Opera) */
         .element::-webkit-scrollbar {
           display: none; /* Hide scrollbar */
@@ -175,17 +175,6 @@ const A1Screen = ({ navigateToA2 }) => {
         /* Internet Explorer and Edge */
         .element {
           -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
-        }
-
-        @keyframes fadeIn {
-          to {
-            opacity: 1;
-          }
-        }
-        @keyframes fadeOut {
-          to {
-            opacity: 0;
-          }
         }
       `}</style>
     </div>
