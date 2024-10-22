@@ -4,40 +4,93 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <!-- Theme color for the browser UI elements -->
+    <meta name="theme-color" content="#ffffff" /> <!-- Ensures white background around the dynamic island -->
+
+    <!-- Safari-specific status bar style -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="description" content="Web site created using create-react-app" />
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
     <title>React App</title>
+
+    <!-- Responsive viewport height styling -->
+    <style>
+      /* Base styles for container */
+      #root {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+      }
+
+      /* Target iPhone 13 Pro Max (1284px x 2234px viewport in Safari) */
+      @media (max-width: 430px) and (max-height: 926px) {
+        #root {
+          height: 80vh; /* Perfect value for iPhone 13 Pro Max */
+        }
+      }
+
+      /* Target iPhone 12 (1170px x 1988px viewport in Safari) */
+      @media (max-width: 390px) and (max-height: 844px) {
+        #root {
+          height: 78vh; /* Perfect value for iPhone 12 */
+        }
+      }
+
+      /* Target iPhone 14, 15 Max (1290px x 2796px total viewport) */
+      @media (max-width: 430px) and (max-height: 930px) {
+        #root {
+          height: 80vh; /* Adjust based on calculations for iPhone 14, 15 Max */
+        }
+      }
+
+      /* Target regular iPhone 14, 15 (1179px x 2556px total viewport) */
+      @media (max-width: 390px) and (max-height: 850px) {
+        #root {
+          height: 78vh; /* Adjust based on calculations for iPhone 14, 15 */
+        }
+      }
+
+      /* Target iPhone SE (750px x 1334px total viewport) */
+      @media (max-width: 375px) and (max-height: 667px) {
+        #root {
+          height: 78vh; /* Adjust for iPhone SE */
+        }
+      }
+ /* General rule for screens narrower than 431px, excluding iPhone 13 Pro Max */
+@media (max-width: 427.9px) and (max-height: 925px) {
+  #root {
+    height: 100vh; /* Adjust to 100vh for smaller screens */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center elements vertically */
+    align-items: center; /* Center elements horizontally */
+    position: relative; /* Lock elements in place */
+  }
+
+  .element {
+    position: relative; /* Ensure elements stay in place */
+    top: 0; /* Remove any top positioning that may cause jumping */
+    transform: none; /* Prevent any transform-based jumping */
+  }
+}
+
+
+
+
+    
+
+    </style>
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
