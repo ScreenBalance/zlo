@@ -1,13 +1,13 @@
 import './A2.css'; // CSS for A2
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import arrowIcon from '../assets/back-arrow.svg'; // Ensure this path is correct
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 
 const A2Screen = () => {
-  const navigate = useNavigate(); // For navigation back to A1
+  const navigate = useNavigate(); // Initialize useNavigate to programmatically navigate
 
-  const handleBackClick = () => {
-    navigate('/'); // Navigate back to A1
+  const handleNavigationClick = () => {
+    navigate('/'); // Use useNavigate to go back to A1 without reloading the page
   };
 
   return (
@@ -17,10 +17,11 @@ const A2Screen = () => {
           src={arrowIcon}
           alt="Back"
           className="a2-back-button"
-          onClick={handleBackClick}
+          onClick={handleNavigationClick} // Back button triggers the navigation
         />
-        {/* Make the ZLO logo clickable */}
-        <span className="a2-logo" onClick={handleBackClick}>
+
+        {/* ZLO Logo */}
+        <span className="a2-logo" onClick={handleNavigationClick}>
           ZLO
         </span>
       </header>

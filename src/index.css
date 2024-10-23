@@ -7,6 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Apply this to globally remove tap highlights and outlines */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Removes tap highlight globally */
+  outline: none; /* Removes focus outline globally */
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
