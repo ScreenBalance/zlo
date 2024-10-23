@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/zlo/static/css/main.cb24ed6d.css",
-    "main.js": "/zlo/static/js/main.62d4a2c4.js",
+    "main.css": "/zlo/static/css/main.6a2a2e1b.css",
+    "main.js": "/zlo/static/js/main.495f70dd.js",
     "static/js/453.ed3810f9.chunk.js": "/zlo/static/js/453.ed3810f9.chunk.js",
     "static/media/zello-logo.svg": "/zlo/static/media/zello-logo.d0d8be5cd5b359932ff13eed2d9a9f5e.svg",
     "index.html": "/zlo/index.html",
     "static/media/back-arrow.svg": "/zlo/static/media/back-arrow.4a66264a38e81f6c40e877b630d21f84.svg",
-    "main.cb24ed6d.css.map": "/zlo/static/css/main.cb24ed6d.css.map",
-    "main.62d4a2c4.js.map": "/zlo/static/js/main.62d4a2c4.js.map",
+    "main.6a2a2e1b.css.map": "/zlo/static/css/main.6a2a2e1b.css.map",
+    "main.495f70dd.js.map": "/zlo/static/js/main.495f70dd.js.map",
     "453.ed3810f9.chunk.js.map": "/zlo/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb24ed6d.css",
-    "static/js/main.62d4a2c4.js"
+    "static/css/main.6a2a2e1b.css",
+    "static/js/main.495f70dd.js"
   ]
 }
