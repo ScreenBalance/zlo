@@ -1,0 +1,94 @@
+/* Base Styles for the A2 Container */
+.a2-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+  }
+  
+  /* Header: Flex container for layout */
+  .a2-header {
+    position: relative;
+    width: 100%;
+    height: 16vh; /* Adjust header height independently */
+    background-color: white;
+    border-bottom: 1px solid #E8E8E8;
+  }
+  
+  /* Independent Back Button */
+  .a2-back-button {
+    position: absolute;
+    top: 3vh; /* Independently positioned based on viewport height */
+    left: 3vw; /* Positioned relative to the left side of the screen */
+    width: 6vw; /* Responsive size */
+    height: 6vw;
+    cursor: pointer;
+  }
+  
+  /* Independent ZLO Logo */
+  .a2-logo {
+    position: absolute;
+    top: 3vh; /* Independently positioned relative to the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center logo using translate */
+    font-size: 5vw; /* Responsive text size */
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 17%;
+    color: #E8E8E8;
+    cursor: pointer; /* Makes it look clickable */
+    outline: none; /* Removes the default outline on focus/click */
+  }
+  
+  .a2-logo:focus {
+    outline: none; /* Ensures no focus outline when clicked */
+  }
+  
+  .a2-logo:active {
+    outline: none; /* Removes outline when clicked/active */
+    opacity: 0.9; /* Optional: slight change in opacity for click feedback */
+  }
+  
+  /* Media Query for Larger Screens (e.g., Desktop) */
+  @media (min-width: 1284px) {
+    .a2-header {
+      height: 10vh;
+    }
+  
+    .a2-back-button {
+      width: 4vw;
+      height: 4vw;
+      top: 2vh;
+      left: 2vw;
+    }
+  
+    .a2-logo {
+      font-size: 2.5vw;
+      top: 2vh;
+    }
+  }
+  
+  /* Media Query for iPhone 13 Pro Max */
+  @media (max-width: 430px) and (max-height: 930px) {
+    .a2-header {
+      height: 16vh; /* Keep height specific for iPhone */
+    }
+  
+    .a2-back-button {
+      top: 8.7vh;
+      left: 0%;
+      width: 15vw;
+      height: 15vw;
+    }
+  
+    .a2-logo {
+      top: 11vh;
+      font-size: 5vw;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
