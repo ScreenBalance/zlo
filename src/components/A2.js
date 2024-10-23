@@ -98,8 +98,8 @@ const A2Screen = () => {
           <div
             key={index}
             style={{
-              width: '3vw', // Responsive circle size for mobile
-              height: '3vw',
+              width: '2vw', // Responsive circle size for mobile
+              height: '2vw',
               backgroundColor: '#DFDFDF',
               borderRadius: '50%',
             }}
