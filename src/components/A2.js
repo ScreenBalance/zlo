@@ -4,12 +4,24 @@ import arrowIcon from '../assets/back-arrow.svg'; // Import the back arrow icon
 
 const A2Screen = () => {
   const [dots, setDots] = useState([]);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const navigate = useNavigate(); // For navigation back to A1
 
   useEffect(() => {
     // Generate 1080 dots (24 columns * 45 rows)
     const newDots = Array.from({ length: 1080 }, (_, i) => i);
     setDots(newDots);
+
+    // Update the viewport height dynamically for mobile devices
+    const handleResize = () => {
+      setViewportHeight(window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const handleBackClick = () => {
@@ -20,7 +32,7 @@ const A2Screen = () => {
     <div
       style={{
         width: '100%',
-        height: '100vh', // Ensure it takes full viewport height
+        height: `${viewportHeight}px`, // Dynamically use window height for mobile devices
         backgroundColor: 'white',
         display: 'flex',
         flexDirection: 'column',
